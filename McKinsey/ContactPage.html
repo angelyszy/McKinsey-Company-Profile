@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="Cloud.JPG">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #0c1638;
+        }
+
+        .topnav a {
+            float: right;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #333f67;
+            color: white;
+        }
+
+        .topnav a.active {
+            background-color: #333f67;
+            color: white;
+            font-weight: normal;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            color: #333f67;
+        }
+
+        .container h2 {
+            font-size: 24px;
+            color: #333f67;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #333f67;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .container strong {
+            color: #333f67;
+        }
+
+        .btn {
+            background-color: #0c1638;
+            color: #ffffff;
+        }
+
+        .btn:hover {
+            background-color: #333f67;
+        }
+
+        .privacy-policy {
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: normal;
+        }
+
+        .custom-bg-color {
+            background-color: #1a1a2b;
+        }
+
+        /* Additional style for the success message */
+        .success-message {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: none; /* Hide by default */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-bg-color">
+        <a class="navbar-brand" href="#">
+            <img src="McKinsey.jpg" alt="McKinsey Logo" style="width: 150px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Main.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Careers.html">Careers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ContactPage.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Thank you for your interest in McKinsey.</p>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="question">I Have A Question About:*</label>
+                <select class="form-control" id="question" required>
+                    <option value="">Select</option>
+                    <option value="account">My Member Account</option>
+                    <option value="services">Consulting Services</option>
+                    <option value="publishing">McKinsey Publishing</option>
+                    <option value="applying">Applying To McKinsey</option>
+                    <option value="inquiries">Other Business Inquiries</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class "form-group">
+                <label for="company">Company Or School</label>
+                <input type="text" class="form-control" id="company">
+            </div>
+            <div class "form-group">
+               <br> <label for="title">Title</label>
+                <input type="text" class="form-control" id="title">
+            </div>
+            <div class="form-group">
+                <br><label for="subject">Subject*</label>
+                <input type="text" class="form-control" id="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message*</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="validation" required>
+                <label class="form-check-label" for="validation">I agree to the terms and conditions</label>
+            </div>
+
+            <!-- Privacy Policy Text -->
+            <div class="privacy-policy">
+                <p>McKinsey & Company is committed to protecting your information. Your information will be used in accordance with
+                    the applicable data privacy law, our internal policies, and our privacy policy. As McKinsey is a global
+                    organization, your information may be stored and processed by McKinsey and its affiliates in countries
+                    outside your country of residence, but wherever your information is processed, we will handle it with the
+                    same care and respect for your privacy.</p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <!-- Success Message (Hidden by Default) -->
+        <div class="success-message" id="successMessage">
+            Your question has been submitted!
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for form validation and success message -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+            const successMessage = document.getElementById("successMessage");
+            const initialMessage = document.getElementById("initialMessage");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                if (form.checkValidity()) {
+                    // Form is valid, hide the form and display success message
+                    form.style.display = "none";
+                    successMessage.style.display = "block";
+                }
+                form.classList.add("was-validated");
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
